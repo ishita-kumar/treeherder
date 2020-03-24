@@ -78,7 +78,7 @@ export default class ReplicatesGraph extends React.Component {
     const localReplicateData = await Promise.all(replicatePromises);
     const errorMessages = processErrors(localReplicateData);
 
-    if (errorMessages.length || localReplicateData[0].error) {
+    if (errorMessages.length) {
       replicateData.replicateDataError = true;
       return { replicateData };
     }

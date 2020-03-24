@@ -136,7 +136,7 @@ export default class PerfSeriesModel {
     const { data, failureStatus } = await JobModel.getList({ id: jobId });
 
     if (failureStatus || !data.length) {
-      return { error: true };
+      return { failureStatus: true, data: ['No data for this job'] };
     }
 
     const { task_id: taskId, retry_id: run } = data[0];

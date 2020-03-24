@@ -184,7 +184,8 @@ const mockedGetData = async () => ({
 });
 const successfulGetReplicateData = () =>
   Promise.resolve({ failureStatus: null, data: mockedReplicateData });
-const failingGetReplicateData = () => Promise.resolve({ failureStatus: true, data: [] });
+const failingGetReplicateData = () =>
+  Promise.resolve({ failureStatus: true, data: [] });
 
 afterEach(cleanup);
 
